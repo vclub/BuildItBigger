@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/vclub/git/FinalProject/app/build/intermediates/exploded-aar/FinalProject/imageactivity/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57d71c2a4b69babe672686d151eb0080ab76ae7c">
+        <dex dex="/Users/vclub/git/FinalProject/app/build/intermediates/pre-dexed/debug/FinalProject-imageactivity-unspecified_4bfd1aa5a18dd5f33fe6f65482f19c76022bb1ca.jar" />
+    </item>
+
+</items>
