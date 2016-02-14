@@ -17,3 +17,36 @@ allprojects {
         jcenter()
     }
 }
+
+
+task launchesGCEServer(dependsOn:[":backend:appengineRun"]) {
+    evaluationDependsOn ":backend"
+
+    project(":backend") {
+        appengine {
+            daemon true
+        }
+    }
+    doLast {
+        println("Launches the GCE local development server")
+    }
+}
+
+task runAndroidTest(dependsOn:[":app:connectedAndroidTest"]){
+    evaluationDependsOn ":app"
+
+    doLast {
+        println("Run all tests")
+    }
+}
+
+task shutDownServer(dependsOn:[":backend:appengineStop"]){
+    evaluationDependsOn ":backend"
+
+    doLast {
+        println("Shuts the server down again")
+    }
+}
+
+runAndroidTest.dependsOn launchesGCEServer
+shutDownServer.dependsOn runAndroidTest
